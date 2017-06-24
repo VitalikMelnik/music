@@ -1,0 +1,162 @@
+<div class="container hei">
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- FORM ============ -->
+                <p class="form_header">Fill out the form</p>
+            <form name="userForm" ng-submit="submitForm()" novalidate>
+                <!-- title -->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.title.$invalid && !userForm.title.$pristine }">
+                    <label>Title</label>
+                    <input type="text" name="title" class="form-control" ng-model="user.title" required ng-minlength="3" ng-maxlength="20" >
+                    <p ng-show="userForm.title.$invalid && !userForm.title.$pristine" class="help-block">You title is required.</p>
+                    <p ng-show="userForm.title.$error.minlength" class="help-block">title is too short.</p>
+                    <p ng-show="userForm.title.$error.maxlength" class="help-block">title is too long.</p>
+                </div>
+                <!-- artist -->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.artist.$invalid && !userForm.artist.$pristine }">
+                    <label>Artist</label>
+                    <input type="text" name="artist" class="form-control" ng-model="user.artist" ng-minlength="2" ng-maxlength="20">
+                    <p ng-show="userForm.artist.$error.minlength" class="help-block">Artistname is too short.</p>
+                    <p ng-show="userForm.artist.$error.maxlength" class="help-block">Artistname is too long.</p>
+                </div>
+                <!-- country -->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.country.$invalid && !userForm.country.$pristine }">
+                    <label>Country</label>
+                    <input type="text" name="country" class="form-control" ng-model="user.country" ng-minlength="2" ng-maxlength="20">
+                    <p ng-show="userForm.country.$error.minlength" class="help-block">Countryname is too short.</p>
+                    <p ng-show="userForm.country.$error.maxlength" class="help-block">Countryname is too long.</p>
+                </div>
+                <!-- company -->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.company.$invalid && !userForm.company.$pristine }">
+                    <label>Company</label>
+                    <input type="text" name="company" class="form-control" ng-model="user.company" ng-minlength="2" ng-maxlength="20">
+                    <p ng-show="userForm.company.$error.minlength" class="help-block">Companyname is too short.</p>
+                    <p ng-show="userForm.company.$error.maxlength" class="help-block">Companyname is too long.</p>
+                </div>
+
+                <!-- url -->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.url.$invalid && !userForm.url.$pristine }">
+                    <label>Image url</label>
+                    <input type="text" name="url" class="form-control" ng-model="user.logoUrl" ng-minlength="4" ng-maxlength="200">
+                    <p ng-show="userForm.url.$error.minlength" class="help-block">Companyname is too short.</p>
+                    <p ng-show="userForm.url.$error.maxlength" class="help-block">Companyname is too long.</p>
+                </div>
+
+                <!-- Price-->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.price.$invalid && !userForm.price.$pristine }">
+                    <label>Price</label>
+                        Size (double 0 - 20):
+                        <input type="number" name="price" step="0.1" class="form-control" ng-model="user.price"  min="0" max="20" integer />
+                    <span ng-show="form.price.$error.integer">The value is not a valid double!</span>
+                    <span ng-show="form.price.$error.min || form.price.$error.max">The value must be in range 0 to 20!</span>
+                </div>
+                <!-- year -->
+                <div class="form-group" ng-class="{ 'has-error' : userForm.year.$invalid && !userForm.year.$pristine }">
+                    <label>Year</label>
+                    Size (year 1000 - 2017):
+                    <input type="number" name="year"  class="form-control" ng-model="user.year"  min="1000" max="2017" integer />
+                    <span ng-show="form.year.$error.integer">The value is not a valid year!</span>
+                    <span ng-show="form.year.$error.min || form.year.$error.max">The value must be in range 1000 to 2017!</span>
+                </div>
+                <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button>
+            </form>
+        </div>
+        <div class="col-sm-6">
+             <div class="row">
+                <div class="container1">
+                    <div class="main">
+                        <div class="circle c1">
+                            <div class="inner-C">
+                                <div class="inner-inner"></div>
+                                <div class="hole hole1">
+                                    <div class="line h-Top"></div>
+                                    <div class="line h-Right"></div>
+                                    <div class="line h-Bottom"></div>
+                                    <div class="line h-Left"></div>
+                                </div>
+                                <div class="hole hole2">
+                                    <div class="line h-Top"></div>
+                                    <div class="line h-Right"></div>
+                                    <div class="line h-Bottom"></div>
+                                    <div class="line h-Left"></div>
+                                </div>
+                                <div class="hole hole3">
+                                    <div class="line h-Top"></div>
+                                    <div class="line h-Right"></div>
+                                    <div class="line h-Bottom"></div>
+                                    <div class="line h-Left"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="circle c2">
+                            <div class="inner-C">
+                                <div class="inner-inner"></div>
+                                <div class="hole hole1">
+                                    <div class="line h-Top"></div>
+                                    <div class="line h-Right"></div>
+                                    <div class="line h-Bottom"></div>
+                                    <div class="line h-Left"></div>
+                                </div>
+                                <div class="hole hole2">
+                                    <div class="line h-Top"></div>
+                                    <div class="line h-Right"></div>
+                                    <div class="line h-Bottom"></div>
+                                    <div class="line h-Left"></div>
+                                </div>
+                                <div class="hole hole3">
+                                    <div class="line h-Top"></div>
+                                    <div class="line h-Right"></div>
+                                    <div class="line h-Bottom"></div>
+                                    <div class="line h-Left"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m2">
+                            <div class="sRec"></div>
+                            <div class="rec">
+                                <div class="mini-Circle mc1"></div>
+                                <div class="mini-Circle mc2"></div>
+                                <div class="mini-Circle mcBig"></div>
+                                <div class="line line-Left"></div>
+                                <div class="line line-Left2"></div>
+                                <div class="line line-Right"></div>
+                                <div class="line line-Right2"></div>
+                            </div>
+                        </div>
+                        <div class="m3">
+                            <div class="nobs nobs1">
+                                <div class="mini-Circle mc3"></div>
+                                <div class="mini-Circle mc4"></div>
+                                <div class="mini-Circle mc5"></div>
+                            </div><!--
+      --><div class="boxes boxes1">
+                            <div class="box box1">
+                                <div class="meter meter1"></div>
+                            </div>
+                            <div class="box box2">
+                                <div class="meter meter2"></div>
+                            </div>
+                        </div><!--
+      --><div class="boxes boxes2">
+                            <div class="box box3">
+                                <div class="meter meter3"></div>
+                            </div>
+                            <div class="box box4">
+                                <div class="meter meter4"></div>
+                            </div>
+                        </div><!--
+      --><div class="nobs nobs2">
+                            <div class="mini-Circle mc6"></div>
+                            <div class="mini-Circle mc7"></div>
+                            <div class="mini-Circle mc8"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+               <div class="button_in_create">
+                   <button class="btn btn-primary" ng-click="editLocation()">Return to the albums</button>
+                </div>
+            </div>
+        </div>
+    </div>

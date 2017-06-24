@@ -1,0 +1,25 @@
+<audio id="player"  loop autoplay>
+    <source src="/html/audio/audio.ogg" type="audio/ogg">
+    <source src="/html/audio/audio.mp3" type="audio/mpeg">
+</audio>
+<img src="{{$root.img}}" class="head"  alt="vitaliy_img">
+<div class="valume">
+    <button class="btn draw-border" onclick="document.getElementById('player').volume += 0.1">Vol+ </button>
+    <button  class="btn draw-border" onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
+</div>
+<ul class="bars">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<h1>music library</h1>
+<div class="scene">
+    <div class="cube">
+        <span class="side top"><a href="index.html#!/articles">LISTEN</a></span>
+        <span class="side front">MUSIC</span>
+    </div>
+</div>

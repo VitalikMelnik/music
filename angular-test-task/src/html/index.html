@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp" ng-controller="RootController as $root">
+<head>
+    <meta charset="UTF-8">
+    <title>{{$root.authorName}}</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="css/welcome.css" rel="stylesheet" type="text/css" >
+    <link href="css/article.css" rel="stylesheet" type="text/css" >
+    <link href="css/create_album.css" rel="stylesheet" type="text/css" >
+</head>
+<body >
+<div ui-view=""></div>
+<script src="js/app.js"></script>
+<script src="js/main_router.js"></script>
+<script src="js/main.js"></script>
+<script src="js/welcom_controller.js"></script>
+<script src="js/create_albumController.js"></script>
+<script src="js/baground.factory.js"></script>
+<script src="js/article.js"></script>
+<script src="js/album.factory.js"></script>
+<script>
+    function activateSearchbox(el){
+        el.classList.add('searchbox--active')
+    }
+    function deactivateSearchbox(el){
+        el.classList.remove('searchbox--active')
+    }
+
+    function onFocus(){
+        activateSearchbox(document.querySelector('.searchbox'));
+    }
+
+    function onBlur(){
+        deactivateSearchbox(document.querySelector('.searchbox'));
+    }
+</script>
+</body>
+
+</html>

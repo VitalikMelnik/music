@@ -1,0 +1,68 @@
+<div class="prewie_size" ng-show="modal">
+    <div class="close" ng-click="close_modal()"></div>
+         <div class="banner">
+    </div>
+    <table>
+        <tr class="top1">
+            <th>Factors</th>
+            <th>Data</th>
+        </tr>
+        <tr class="normal">
+            <th>Title:</th>
+            <th>{{modal_data.title}}</th>
+        </tr>
+        <tr class="normal">
+            <th>Artist:</th>
+            <th>{{modal_data.artist}}</th>
+        </tr>
+        <tr class="normal">
+            <th>Country:</th>
+            <th>{{modal_data.country}}</th>
+        </tr>
+        <tr class="normal">
+            <th>Company:</th>
+            <th>{{modal_data.company}}</th>
+        </tr>
+        <tr class="normal">
+            <th>Price:</th>
+            <th>{{modal_data.price}}</th>
+        </tr>
+        <tr class="normal">
+            <th>Year:</th>
+            <th>{{modal_data.year}}</th>
+        </tr>
+    </table>
+    <div class="img" style="background:url({{modal_data.logoUrl}})"></div>
+</div>
+<main>
+    <div class="wrap">
+        <button class="tip">
+            <a href="index.html#!/create_album">Want to add a new album?</a>
+            <!-- change the class on the span below between 'top', 'right', 'bottom', 'left' -->
+    <span class="left">Click on the link if you want to add your own album.<span class="nub"></span>
+    </span>
+        </button>
+    </div>
+    <h5 class="text_count">Registered albums</h5>
+    <div class="container_count"><div class="num_count">{{count.value}}</div></div>
+<div class="searchbox" ">
+    <input type="text" ng-model="searchKeyword" onFocus="onFocus()" onBlur="onBlur()"/>
+    <button>
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+</div>
+<section id="gallery">
+    <div class="thumbnail" ng-repeat="todo in log | filter: searchKeyword ">
+        <h4 class="text-gallary">{{ todo.artist }}</h4>
+        <br>
+        <h4 class=".text-gallary-2">{{todo.year}}</h4>
+        <button class="btn btn-primary" ng-click="open_modal(todo.id)">More</button>
+        <button class="btn btn-primary" ng-click="editAlbum(todo.id)">EDIT</button>
+        <input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(todo.id)"/>
+    </div>
+</section>
+    <!--<article ng-repeat="todo in todos">-->
+        <!--{{ todo.title }}<br>-->
+        <!--{{ todo.artist }}<hr>-->
+    <!--</article>-->
+</main>

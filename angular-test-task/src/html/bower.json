@@ -1,0 +1,21 @@
+{
+  "name": "html",
+  "homepage": "https://github.com/morfeus929/angular-test-task",
+  "authors": [
+    "VitalikMelnik <vitalikmelnik20000@gmail.com>"
+  ],
+  "description": "music",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.3",
+    "angular-ui-router": "ui-router#0.4.2"
+  }
+}
